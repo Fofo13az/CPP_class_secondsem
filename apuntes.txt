@@ -1,0 +1,17 @@
+OOP: Object oriented programming 
+Crear objetos que contenga data y funciones
+- Más rápido
+- Más fácil 
+- DRY (Don't repeat yourself)
+- Más fácil de mantener, modificar y debuggear
+
+Class: Tenemos variables (attributes) y funciones (methods) dentro de la clase 
+Object: Instance de la class para poder empezar a usarla. Hay que definirlo en el main function usando: (nombre de la clase) (nombre del objeto);
+
+Encapsulation: Meter methods y variables dentro de un class se dice Encapsulation. Esto sirve para esconder los datos privados usando private
+
+Constructors: Es un method con el mismo nombre de la clase y se ejecuta automáticamente
+Se hace: nombre_de_la_clase()
+Es como conectar el method con el Object
+
+
