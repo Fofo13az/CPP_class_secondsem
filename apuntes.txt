@@ -31,3 +31,48 @@ class Derived: public Base{
 };
 Es como si la derived class agarrara todo lo que la base class tiene
 
+Multilevel inheritance: Podemos tener una clase parent-child-grandchild. Se vuelve como una escalera de inheritances
+Base -> Base + derived 1 -> base + derived 1 + derived 2
+Multiple inheritance: Si una clase hace inheritance de las otras, pero sin niveles
+
+Constructor/inheritance: Hay dos formas:
+1. Si el constructor no recibe nada
+2. Si hay un constructor con parameters en el base y en el derived no hay constructor se usa el scope resolution operator ::
+3. Hay constructor con parametros tanto en el base como en el derived. Se hace mapping
+Siempre que haya un inheritance, el base lleva protected en sus datos
+Solo hemos trabajado con public inheritance, y la forma en la que funciona es que la derived class toma los datos que estén en 
+public y en protected en la base class. Pero quedan: lo que en la base estaba en public -> queda en el public del derived
+lo que en base estaba protected -> queda en protected de derived
+lo que en base estaba en private -> no se puede heredar
+Pero que pasa si se hace protected inheritance?
+En vez de que los datos pasen de base a derived y se queden en su mismo lugar, los datos pasan de base a derived pero pasan
+directamente al protected del derived
+Por último se puede hacer private inheritance: Los datos pasan desde su lugar en base directamente al private del derived
+
+Function overriding: Se da cuando tienes un method o attribute igual tanto en una clase base como en una derived
+class Base{
+    public:
+    void print()
+}
+Y puedes tener: class Derived: public Base{
+    public:
+    void print()
+}
+Aquí tenemos dos methods con el mismo nombre.
+Si ahora tenemos el main(){
+    Derived d; Y tenemos el objeto de Derived pero en Derived está tanto el void print de base y el void print de derived
+    d.print(); Si ahora llamamos el metodo repetido, solo se llama el de Derived y el de Base ya no se puede usar
+}
+Para poder recuperar lo de Base class se debe de usar un scope resolution operator hacia el base class desde el derived class
+
+Passing and returning objects: Se pueden recibir objectos como parametros y se pueden regresar objetos
+class Student{
+    public:
+    int average(Student s) Aquí se está recibiendo un objeto como parametro
+    Student average(Student s) Aquí se está devolviendo un objeto
+}
+
+Files: Se quedan en el hard disk
+Se puede mandar una información de la RAM al hard disk
+En CPP se usa una library que se llama filestream
+Para leer del file se usa ifstream
