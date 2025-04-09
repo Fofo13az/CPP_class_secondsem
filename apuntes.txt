@@ -76,3 +76,12 @@ Files: Se quedan en el hard disk
 Se puede mandar una información de la RAM al hard disk
 En CPP se usa una library que se llama filestream
 Para leer del file se usa ifstream
+
+Pointer: El pointer sirve para acceder al memory address en la RAM.
+Cada espacio de la memoria RAM tiene un address en la memoria.
+Para acceder a la address de una variable se usa &.
+int x; | x= 5; || cout<<&x; va a imprimir el memory address 
+Pointer: Una variable que tiene el memory address de otra variable.
+Si yo tengo x, y pongo int *a = &x. La variable (pointer) a tendrá la memory address de x. 
+El pointer debe tener el mismo tipo de data que la variable a la que apunta.
+Por ejemplo, si tienes un array y quieres hacer cout del array, te saldrá el memory address del primer index (0).
