@@ -85,3 +85,36 @@ Pointer: Una variable que tiene el memory address de otra variable.
 Si yo tengo x, y pongo int *a = &x. La variable (pointer) a tendrá la memory address de x. 
 El pointer debe tener el mismo tipo de data que la variable a la que apunta.
 Por ejemplo, si tienes un array y quieres hacer cout del array, te saldrá el memory address del primer index (0).
+
+En CPP no se puede regresar un array, pero si un pointer. Si se quiere regresar un array de una función, debe ser regresado con el pointer. 
+
+Proyecto final:
+3 clases -> Video (parent) Series y movies (dos derived class)
+
+Polymorphism: Significa "many forms" -> misma persona, distintos roles/tareas
+Se da cuando dos métodos tienen el mismo nombre pero hacen distintas tareas. 
+Las advantages de usar Polymorphism: Code reusability. Tengo un método que hace una tarea, pero quiero que haga otra tarea. Se usa y se hace overriding.
+Maintainability 
+Extensability
+Reduction in complexity 
+Hay dos tipos de Polymorphism. Compile time y runtime 
+
+Compile time: Function overloading: Es cuando dos o más métodos tiene el mismo nombre pero distintos parametros
+Operator overloading: Usando + 
+
+Runtime: Funciton overriding: Cuando hay dos funciones (una en derived y una en base) con el mismo nombre. Si queremos llamar solo el método del base, se usa esto.
+Se crea un pointer como objeto de base que apunte al objeto del derived. 
+
+Virtual functions: 
+Normal virtual function: 
+virtual void print(){} Se pone virtual antes del nombre de la funcion
+Si se pone en una base class, y luego en una derived class se overridea la funcion, no puedes acceder a la de base porque está en virtual. 
+Hay otro tipo de virtual function. Pure virtual function: No lleva body de function. Lleva header y luego = 0; no lleva código.
+virtual void show() = 0;
+Sirve para hacer abstract class. La abstract class no puede tener objeto, solo pointer.
+También sirve para obligar a la derived class a overridear un método.
+
+Abstract class: Debe tener una pure virtual function. No puede tener objeto pero si pointer.
+
+Para hacer un input de un string largo: Se usa 
+getline(cin, name)
